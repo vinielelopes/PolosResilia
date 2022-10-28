@@ -1,0 +1,11 @@
+.polosLista{
+    margin-top: 5%;
+    padding-bottom: 7%;
+}
+.polos{
+    color: white;
+}
+.polos:hover{
+    color: rgba(255, 208, 0);
+
+}
