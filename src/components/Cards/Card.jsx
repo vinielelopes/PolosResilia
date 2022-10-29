@@ -40,6 +40,7 @@ export function Card(props){
                     <input
                     placeholder='Matrícula'
                     type='text'
+                    maxlength="8"
                     onChange={(e) => setMatricula(e.target.value)}
                     ></input>
                     <input

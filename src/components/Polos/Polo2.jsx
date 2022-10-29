@@ -14,7 +14,7 @@ export function Polo2(){
 
     const getData = () => {
         axios
-        .get(`https://635c1dd1fc2595be264102ea.mockapi.io/alunos?polo=2`)
+        .get(`https://635c1dd1fc2595be264102ea.mockapi.io/alunos?polo=02`)
         .then((res) => {
             setData(res.data);
         });
@@ -43,7 +43,7 @@ export function Polo2(){
 
     return (
         <div className='polo1'>  
-            <h2>Polo 2 - São Paulo</h2> 
+            <h2>Polo 02 - São Paulo</h2> 
             <p>Alunos cadastrados: {quantAlunos}</p>         
             <button onClick={() => setHidden2((s) => !s)} className='buttonAT'> Adicionar aluno </button>
             {!hidden2 ? (
@@ -51,6 +51,7 @@ export function Polo2(){
                     <input
                     placeholder="Matrícula"
                     type="text"
+                    maxlength="8"
                     onChange={(e) => setMatricula(e.target.value)}
                     ></input>
                     <input

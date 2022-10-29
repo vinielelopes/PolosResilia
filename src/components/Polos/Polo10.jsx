@@ -51,6 +51,7 @@ export function Polo10(){
                     <input
                     placeholder="Matrícula"
                     type="text"
+                    maxlength="8"
                     onChange={(e) => setMatricula(e.target.value)}
                     ></input>
                     <input
