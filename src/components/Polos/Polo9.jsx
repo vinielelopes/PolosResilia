@@ -4,7 +4,7 @@ import { Card } from '../Cards/Card';
 import { useState, useEffect } from 'react';
 import './Polo.css';
 
-export function Polo1(){
+export function Polo9(){
     const [data, setData] = useState([]);
     const [hidden2, setHidden2] = useState(true);
     const [matricula, setMatricula] = useState('');
@@ -14,7 +14,7 @@ export function Polo1(){
 
     const getData = () => {
         axios
-        .get(`https://635c1dd1fc2595be264102ea.mockapi.io/alunos?polo=1`)
+        .get(`https://635c1dd1fc2595be264102ea.mockapi.io/alunos?polo=9`)
         .then((res) => {
             setData(res.data);
         });
@@ -43,7 +43,7 @@ export function Polo1(){
 
     return (
         <div className='polo1'>  
-            <h2>Polo 1 - Rio de Janeiro</h2> 
+            <h2>Polo 9 - Maceió</h2> 
             <p>Alunos cadastrados: {quantAlunos}</p>         
             <button onClick={() => setHidden2((s) => !s)} className='buttonAT'> Adicionar aluno </button>
             {!hidden2 ? (
