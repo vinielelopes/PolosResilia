@@ -2,13 +2,14 @@ import React from 'react';
 import axios from 'axios';
 import { Card } from '../Cards/Card';
 import { useState, useEffect } from 'react';
+import './Polo.css';
 
 export function Polo1(){
     const [data, setData] = useState([]);
-    const [hidden, setHidden] = useState(true);
     const [hidden2, setHidden2] = useState(true);
     const [matricula, setMatricula] = useState('');
     const [polo, setPolo] = useState('');
+    const quantAlunos = data.length
 
 
     const getData = () => {
@@ -25,16 +26,6 @@ export function Polo1(){
       }, []);
 
 
-    const updateData = (e) => {
-        e.preventDefault();
-        axios.put(`https://635c1dd1fc2595be264102ea.mockapi.io/alunos`, 
-        {
-            matricula, 
-            polo
-
-        })
-        alert('Transferência concluída. Atualize a página!')
-    }
 
     const postData = (e) => {
         e.preventDefault();
@@ -51,8 +42,10 @@ export function Polo1(){
    
 
     return (
-        <div>            
-            <button onClick={() => setHidden2((s) => !s)}> Adicionar </button>
+        <div className='polo1'>  
+            <h2>Polo 1 - Rio de Janeiro</h2> 
+            <p>Alunos cadastrados: {quantAlunos}</p>         
+            <button onClick={() => setHidden2((s) => !s)} className='buttonAT'> Adicionar aluno </button>
             {!hidden2 ? (
                 <div>
                     <input
@@ -64,28 +57,15 @@ export function Polo1(){
                     placeholder='Id do Polo'
                     onChange={(e) => setPolo(e.target.value)}
                     ></input>
-                    <button type="submit" onClick={postData}> Salvar </button>
+                    <button type="submit" onClick={postData} className='buttonAT'> Salvar </button>
                 </div>
             ) : null}
-            <button onClick={() => setHidden((s) => !s)}> Transferir </button>
-            {!hidden ? (
-                <div>
-                    <input
-                    placeholder='Matrícula'
-                    type='text'
-                    onChange={(e) => setMatricula(e.target.value)}
-                    ></input>
-                    <input
-                    placeholder='Id do Polo Novo'
-                    onChange={(e) => setPolo(e.target.value)}
-                    ></input>
-                    <button type="submit" onClick={updateData}> Salvar </button>
-                </div>
-            ) : null}
+           
 
             {data.map((obj) => (
                 <Card
 
+                id={obj.id}
                 matricula={obj.matricula}
                 polo={obj.polo}
 

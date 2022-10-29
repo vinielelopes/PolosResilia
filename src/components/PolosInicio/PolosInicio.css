@@ -1,9 +1,14 @@
 .polosLista{
-    margin-top: 5%;
+    margin-top: 8%;
     padding-bottom: 7%;
+    text-align:justify;
+    margin-left: 25%;
+
 }
 .polos{
     color: white;
+    font-size: x-large;
+    text-decoration: none;
 }
 .polos:hover{
     color: rgba(255, 208, 0);
