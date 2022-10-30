@@ -10,10 +10,12 @@ import {BrowserRouter} from "react-router-dom";
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
+    <HashRouter>
     <App>
       <Polo1/>
       <Polo2/>
     </App>
+    </HashRouter>
     </BrowserRouter>
   </React.StrictMode>
 )
