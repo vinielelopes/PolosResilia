@@ -53,7 +53,7 @@ $ <http://localhost:5172>
 #
 
 ### 🌐 Deploy
-[Polos Resilia](https://vinielelopes.github.io/PolosResilia/)
+- [Polos Resilia](https://vinielelopes.github.io/PolosResilia/)
  
  
  ---
