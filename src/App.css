@@ -21,6 +21,7 @@ img{
   border: 1px solid white;
   margin-top: 2%;
   font-size: large;
+  margin-bottom: 2%;
 }
 .buttonPolos:hover{
   border-color: rgba(255,208,0);
